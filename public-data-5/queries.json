@@ -1,0 +1,227 @@
+[
+  {
+    "id": "hx2_q001",
+    "file_name": "hx2_t01_retail_returns.xlsx",
+    "query": "Join Orders to Product lookup. Exclude Returned and Cancelled orders; calculate net revenue after discounts for Accessories in South. Return 2 decimal places."
+  },
+  {
+    "id": "hx2_q002",
+    "file_name": "hx2_t01_retail_returns.xlsx",
+    "query": "For Done orders only, total net revenue after discount by region. Which region ranks second? Break ties alphabetically."
+  },
+  {
+    "id": "hx2_q003",
+    "file_name": "hx2_t01_retail_returns.xlsx",
+    "query": "How many units were sold in the Displays category on Done orders? Exclude returned and cancelled orders."
+  },
+  {
+    "id": "hx2_q004",
+    "file_name": "hx2_t02_population_trends.xlsx",
+    "query": "Join the district map. Among districts with population growth from 2023 to 2024 greater than 4% and at most 6%, which had the largest 2025 population?"
+  },
+  {
+    "id": "hx2_q005",
+    "file_name": "hx2_t02_population_trends.xlsx",
+    "query": "For 2025, compute population-weighted UrbanShare using Population as weights. Return percentage to 2 decimals."
+  },
+  {
+    "id": "hx2_q006",
+    "file_name": "hx2_t02_population_trends.xlsx",
+    "query": "For district A, calculate compound annual population growth from 2023 to 2025 over two annual intervals. Return percentage to 2 decimals."
+  },
+  {
+    "id": "hx2_q007",
+    "file_name": "hx2_t03_student_assessment.xlsx",
+    "query": "Calculate weighted score = Quiz 20%, Project 30%, FinalExam 50%. Among RetakeFlag=1, what is the highest score? Return 2 decimals."
+  },
+  {
+    "id": "hx2_q008",
+    "file_name": "hx2_t03_student_assessment.xlsx",
+    "query": "How many students have weighted score at least 85 while Quiz is below 90, using weights 20%, 30%, 50%?"
+  },
+  {
+    "id": "hx2_q009",
+    "file_name": "hx2_t03_student_assessment.xlsx",
+    "query": "Rank by weighted score descending, breaking ties by StudentID ascending. Return the third-ranked student's name."
+  },
+  {
+    "id": "hx2_q010",
+    "file_name": "hx2_t04_inventory_ledger.xlsx",
+    "query": "Compute closing stock = opening + receipts − issues. Which item has the smallest closing-stock-to-ReorderPoint ratio? Tie-break alphabetically."
+  },
+  {
+    "id": "hx2_q011",
+    "file_name": "hx2_t04_inventory_ledger.xlsx",
+    "query": "How many SKUs have closing stock strictly below ReorderPoint?"
+  },
+  {
+    "id": "hx2_q012",
+    "file_name": "hx2_t04_inventory_ledger.xlsx",
+    "query": "Calculate total closing inventory value as closing stock × UnitCost for all SKUs. Return an integer."
+  },
+  {
+    "id": "hx2_q013",
+    "file_name": "hx2_t05_weather_extremes.xlsx",
+    "query": "Compute each station's mean daily temperature range (maximum minus minimum). Which station has the second-largest mean? Tie-break alphabetically."
+  },
+  {
+    "id": "hx2_q014",
+    "file_name": "hx2_t05_weather_extremes.xlsx",
+    "query": "What percentage of station-day records had rainfall greater than 0 mm? Return 2 decimals and include %."
+  },
+  {
+    "id": "hx2_q015",
+    "file_name": "hx2_t05_weather_extremes.xlsx",
+    "query": "Sum rainfall where MaxTempC is at least 30 and MinTempC is at least 23. Return one decimal place."
+  },
+  {
+    "id": "hx2_q016",
+    "file_name": "hx2_t06_league_results.xlsx",
+    "query": "Build a league table from every match: win=3 points, draw=1. Rank by points, goal difference, then goals for, all descending. Which team is second?"
+  },
+  {
+    "id": "hx2_q017",
+    "file_name": "hx2_t06_league_results.xlsx",
+    "query": "Which team conceded the most goals across home and away matches? Tie-break alphabetically."
+  },
+  {
+    "id": "hx2_q018",
+    "file_name": "hx2_t06_league_results.xlsx",
+    "query": "Across only drawn matches, how many goals were scored in total by both teams?"
+  },
+  {
+    "id": "hx2_q019",
+    "file_name": "hx2_t07_budget_variance.xlsx",
+    "query": "Join budget and actuals by Department. Sum Q1–Q3 spend and identify the department with the largest positive remaining budget."
+  },
+  {
+    "id": "hx2_q020",
+    "file_name": "hx2_t07_budget_variance.xlsx",
+    "query": "Across all departments, total Q2 spend divided by total Q1 spend, as a percentage to 2 decimals."
+  },
+  {
+    "id": "hx2_q021",
+    "file_name": "hx2_t07_budget_variance.xlsx",
+    "query": "How many departments used strictly more than 75% of their QuarterBudget in Q1–Q3 combined?"
+  },
+  {
+    "id": "hx2_q022",
+    "file_name": "hx2_t08_energy_costs.xlsx",
+    "query": "Compute cost=UsageKWh×TariffPerKWh per row. Which plant had the highest total cost over January–March?"
+  },
+  {
+    "id": "hx2_q023",
+    "file_name": "hx2_t08_energy_costs.xlsx",
+    "query": "For Plant B, percentage change in UsageKWh from January to March relative to January. Return 2 decimals with %."
+  },
+  {
+    "id": "hx2_q024",
+    "file_name": "hx2_t08_energy_costs.xlsx",
+    "query": "Combined electricity cost for all plants in February, rounded to 2 decimals."
+  },
+  {
+    "id": "hx2_q025",
+    "file_name": "hx2_t09_library_loans.xlsx",
+    "query": "Join loans to book catalog. Late days=max(0, calendar days between checkout and return minus LoanDaysAllowed); fee=late days×FeePerLateDay. Total fee for Science books? Return 2 decimals."
+  },
+  {
+    "id": "hx2_q026",
+    "file_name": "hx2_t09_library_loans.xlsx",
+    "query": "Which UserID has the largest total late days across all loans? Tie-break UserID ascending."
+  },
+  {
+    "id": "hx2_q027",
+    "file_name": "hx2_t09_library_loans.xlsx",
+    "query": "How many loans were returned within the allowed period, including exactly on the due day?"
+  },
+  {
+    "id": "hx2_q028",
+    "file_name": "hx2_t10_flight_operations.xlsx",
+    "query": "Exclude cancelled flights. Which carrier has the highest delay rate (delayed non-cancelled flights / all non-cancelled flights for that carrier)? Tie-break alphabetically."
+  },
+  {
+    "id": "hx2_q029",
+    "file_name": "hx2_t10_flight_operations.xlsx",
+    "query": "For non-cancelled flights arriving at LAX, calculate passenger-weighted delay rate (DelayedFlag weighted by Passengers). Return percentage to 2 decimals."
+  },
+  {
+    "id": "hx2_q030",
+    "file_name": "hx2_t10_flight_operations.xlsx",
+    "query": "Among non-cancelled flights, absolute difference between flight counts originating at JFK and BOS."
+  },
+  {
+    "id": "hx2_q031",
+    "file_name": "hx2_t11_hospital_capacity.xlsx",
+    "query": "Aggregate admissions by WardID and join ward reference. Which ward has the highest cumulative PatientsAdmitted per bed?"
+  },
+  {
+    "id": "hx2_q032",
+    "file_name": "hx2_t11_hospital_capacity.xlsx",
+    "query": "Overall critical-case rate = total CriticalCases / total PatientsAdmitted; do not average ward rates. Return 2 decimals with %."
+  },
+  {
+    "id": "hx2_q033",
+    "file_name": "hx2_t11_hospital_capacity.xlsx",
+    "query": "How many wards have cumulative critical-case rate strictly greater than 30%?"
+  },
+  {
+    "id": "hx2_q034",
+    "file_name": "hx2_t12_agriculture_yield.xlsx",
+    "query": "Compute crop value = Tonnes×1,000 kg/tonne×PricePerKg. Which region has the highest combined value across Rice and Corn?"
+  },
+  {
+    "id": "hx2_q035",
+    "file_name": "hx2_t12_agriculture_yield.xlsx",
+    "query": "Across all regions, weighted average PricePerKg weighted by Tonnes. Return 3 decimal places."
+  },
+  {
+    "id": "hx2_q036",
+    "file_name": "hx2_t12_agriculture_yield.xlsx",
+    "query": "In which region does Corn tonnage exceed Rice tonnage by the largest amount?"
+  },
+  {
+    "id": "hx2_q037",
+    "file_name": "hx2_t13_movie_profitability.xlsx",
+    "query": "Define profit=GrossM−BudgetM−MarketingM and ROI=profit/(BudgetM+MarketingM). Which film has second-highest ROI? Tie-break title alphabetically."
+  },
+  {
+    "id": "hx2_q038",
+    "file_name": "hx2_t13_movie_profitability.xlsx",
+    "query": "How many films had positive profit but gross revenue less than twice their budget?"
+  },
+  {
+    "id": "hx2_q039",
+    "file_name": "hx2_t13_movie_profitability.xlsx",
+    "query": "Median profit across all films, rounded to 1 decimal place."
+  },
+  {
+    "id": "hx2_q040",
+    "file_name": "hx2_t14_orders_customers_refunds.xlsx",
+    "query": "Join Orders to Customers and Adjustments. Include Delivered only; net value=Quantity×UnitPrice−RefundAmount, missing refund=0. Total net value for SMB segment, 2 decimals."
+  },
+  {
+    "id": "hx2_q041",
+    "file_name": "hx2_t14_orders_customers_refunds.xlsx",
+    "query": "Using the same Delivered-only and adjustment rules, which customer Region has the highest total net order value?"
+  },
+  {
+    "id": "hx2_q042",
+    "file_name": "hx2_t14_orders_customers_refunds.xlsx",
+    "query": "Among Delivered orders only, how many have net order value strictly greater than 400 after adjustments?"
+  },
+  {
+    "id": "hx2_q043",
+    "file_name": "hx2_t15_project_delivery.xlsx",
+    "query": "Elapsed duration=EndDate−StartDate in calendar days, not inclusive. Among projects over budget, which had the longest duration? Tie-break ProjectName alphabetically."
+  },
+  {
+    "id": "hx2_q044",
+    "file_name": "hx2_t15_project_delivery.xlsx",
+    "query": "What percentage of projects finished under budget (ActualCost < Budget)? Return 2 decimals with %."
+  },
+  {
+    "id": "hx2_q045",
+    "file_name": "hx2_t15_project_delivery.xlsx",
+    "query": "Sum max(0, ActualCost−Budget) for projects whose elapsed duration is greater than 60 calendar days. Return integer."
+  }
+]
