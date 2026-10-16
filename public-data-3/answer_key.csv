@@ -1,0 +1,51 @@
+id,answer,category
+ht_q001,150,count
+ht_q002,virginica,groupby_argmax
+ht_q003,3.80,filter_max
+ht_q004,13,conditional_count
+ht_q005,0.70,difference_of_means
+ht_q006,virginica,argmax
+ht_q007,100,conditional_sum
+ht_q008,6.59,lookup_format
+ht_q009,"virginica, versicolor, setosa",ranking
+ht_q010,Yes,comparison
+ht_q011,class_0,groupby_argmax
+ht_q012,98.00,median
+ht_q013,63,conditional_count
+ht_q014,278,filter_min
+ht_q015,3.80,range
+ht_q016,class_0,argmax
+ht_q017,178,sum
+ht_q018,5.34,mean_of_summary
+ht_q019,"class_1, class_2, class_0",ranking
+ht_q020,Yes,comparison
+ht_q021,212,conditional_count
+ht_q022,malignant,groupby_argmax
+ht_q023,992.10,filter_max
+ht_q024,4,conditional_count
+ht_q025,5.13,difference_of_medians
+ht_q026,malignant,argmax
+ht_q027,569,sum
+ht_q028,12.15,lookup_format
+ht_q029,"malignant, benign",ranking
+ht_q030,Yes,comparison
+ht_q031,346,max
+ht_q032,47,conditional_count
+ht_q033,Q4_high,groupby_argmax
+ht_q034,63.67,filtered_mean
+ht_q035,202,conditional_count
+ht_q036,Q4_high,argmax
+ht_q037,219,conditional_sum
+ht_q038,260.63,lookup_format
+ht_q039,"Q1_low, Q2_midlow, Q3_midhigh, Q4_high",ranking
+ht_q040,Yes,comparison
+ht_q041,20,count
+ht_q042,situps,column_sum_argmax
+ht_q043,178.60,mean
+ht_q044,7,conditional_count
+ht_q045,28,range
+ht_q046,3,argmax
+ht_q047,1797,sum
+ht_q048,0,argmax
+ht_q049,5.16,lookup_format
+ht_q050,Yes,comparison

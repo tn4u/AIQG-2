@@ -1,0 +1,252 @@
+[
+  {
+    "id": "ht_q001",
+    "file_name": "ht01_iris_observations.xlsx",
+    "query": "How many observations are recorded in the worksheet? Answer with only the integer."
+  },
+  {
+    "id": "ht_q002",
+    "file_name": "ht01_iris_observations.xlsx",
+    "query": "Which species has the greatest average petal_length_cm? Answer with only the species name."
+  },
+  {
+    "id": "ht_q003",
+    "file_name": "ht01_iris_observations.xlsx",
+    "query": "What is the maximum sepal_width_cm among virginica observations? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q004",
+    "file_name": "ht01_iris_observations.xlsx",
+    "query": "How many setosa observations have petal_length_cm greater than 1.5? Answer with only the integer."
+  },
+  {
+    "id": "ht_q005",
+    "file_name": "ht01_iris_observations.xlsx",
+    "query": "What is the absolute difference between the mean petal_width_cm of virginica and versicolor? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q006",
+    "file_name": "ht02_iris_species_summary.xlsx",
+    "query": "Which species has the highest mean_petal_width_cm? Answer with only the species name."
+  },
+  {
+    "id": "ht_q007",
+    "file_name": "ht02_iris_species_summary.xlsx",
+    "query": "What is the combined sample_count for setosa and versicolor? Answer with only the integer."
+  },
+  {
+    "id": "ht_q008",
+    "file_name": "ht02_iris_species_summary.xlsx",
+    "query": "What is the mean_sepal_length_cm for virginica? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q009",
+    "file_name": "ht02_iris_species_summary.xlsx",
+    "query": "Rank the species by mean_petal_length_cm from highest to lowest. Separate names with comma and one space."
+  },
+  {
+    "id": "ht_q010",
+    "file_name": "ht02_iris_species_summary.xlsx",
+    "query": "Is the mean_petal_width_cm for virginica greater than twice that for setosa? Answer with only Yes or No."
+  },
+  {
+    "id": "ht_q011",
+    "file_name": "ht03_wine_observations.xlsx",
+    "query": "Which class_name has the highest average alcohol? Answer with only the class name."
+  },
+  {
+    "id": "ht_q012",
+    "file_name": "ht03_wine_observations.xlsx",
+    "query": "What is the median magnesium value across all observations? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q013",
+    "file_name": "ht03_wine_observations.xlsx",
+    "query": "How many observations have alcohol greater than 13 and color_intensity greater than 5? Answer with only the integer."
+  },
+  {
+    "id": "ht_q014",
+    "file_name": "ht03_wine_observations.xlsx",
+    "query": "What is the minimum proline among class_1 observations? Answer with only the integer."
+  },
+  {
+    "id": "ht_q015",
+    "file_name": "ht03_wine_observations.xlsx",
+    "query": "What is the difference between the maximum and minimum alcohol values? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q016",
+    "file_name": "ht04_wine_class_summary.xlsx",
+    "query": "Which class_name has the highest mean_proline? Answer with only the class name."
+  },
+  {
+    "id": "ht_q017",
+    "file_name": "ht04_wine_class_summary.xlsx",
+    "query": "What is the total sample_count across all classes? Answer with only the integer."
+  },
+  {
+    "id": "ht_q018",
+    "file_name": "ht04_wine_class_summary.xlsx",
+    "query": "What is the average of mean_color_intensity across the three classes? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q019",
+    "file_name": "ht04_wine_class_summary.xlsx",
+    "query": "Rank classes by mean_alcohol in ascending order. Separate names with comma and one space."
+  },
+  {
+    "id": "ht_q020",
+    "file_name": "ht04_wine_class_summary.xlsx",
+    "query": "Is mean_malic_acid for class_0 lower than mean_malic_acid for class_2? Answer with only Yes or No."
+  },
+  {
+    "id": "ht_q021",
+    "file_name": "ht05_breast_cancer_observations.xlsx",
+    "query": "How many observations are labelled malignant? Answer with only the integer."
+  },
+  {
+    "id": "ht_q022",
+    "file_name": "ht05_breast_cancer_observations.xlsx",
+    "query": "Which diagnosis has the higher average mean radius? Answer with only the diagnosis label."
+  },
+  {
+    "id": "ht_q023",
+    "file_name": "ht05_breast_cancer_observations.xlsx",
+    "query": "What is the maximum mean area among benign observations? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q024",
+    "file_name": "ht05_breast_cancer_observations.xlsx",
+    "query": "How many observations have mean texture below 15 and diagnosis malignant? Answer with only the integer."
+  },
+  {
+    "id": "ht_q025",
+    "file_name": "ht05_breast_cancer_observations.xlsx",
+    "query": "What is the absolute difference between the median mean radius for malignant and benign observations? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q026",
+    "file_name": "ht06_breast_cancer_summary.xlsx",
+    "query": "Which diagnosis has the larger mean_area? Answer with only the diagnosis label."
+  },
+  {
+    "id": "ht_q027",
+    "file_name": "ht06_breast_cancer_summary.xlsx",
+    "query": "What is the total sample_count across both diagnosis groups? Answer with only the integer."
+  },
+  {
+    "id": "ht_q028",
+    "file_name": "ht06_breast_cancer_summary.xlsx",
+    "query": "What is mean_radius for benign observations in the summary table? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q029",
+    "file_name": "ht06_breast_cancer_summary.xlsx",
+    "query": "Rank diagnoses by mean_smoothness from highest to lowest. Separate labels with comma and one space."
+  },
+  {
+    "id": "ht_q030",
+    "file_name": "ht06_breast_cancer_summary.xlsx",
+    "query": "Is the sample_count for benign greater than the sample_count for malignant? Answer with only Yes or No."
+  },
+  {
+    "id": "ht_q031",
+    "file_name": "ht07_diabetes_observations.xlsx",
+    "query": "What is the maximum target value in the observations sheet? Answer with only the integer."
+  },
+  {
+    "id": "ht_q032",
+    "file_name": "ht07_diabetes_observations.xlsx",
+    "query": "How many records have target above 200 and feature_bmi above 0.05? Answer with only the integer."
+  },
+  {
+    "id": "ht_q033",
+    "file_name": "ht07_diabetes_observations.xlsx",
+    "query": "Which target_band has the highest average target? Answer with only the target_band label."
+  },
+  {
+    "id": "ht_q034",
+    "file_name": "ht07_diabetes_observations.xlsx",
+    "query": "What is the average target for records in target_band Q1_low? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q035",
+    "file_name": "ht07_diabetes_observations.xlsx",
+    "query": "How many records have feature_age below zero? Answer with only the integer."
+  },
+  {
+    "id": "ht_q036",
+    "file_name": "ht08_diabetes_target_summary.xlsx",
+    "query": "Which target_band has the highest mean_feature_bmi? Answer with only the target_band label."
+  },
+  {
+    "id": "ht_q037",
+    "file_name": "ht08_diabetes_target_summary.xlsx",
+    "query": "What is the sum of sample_count for Q2_midlow and Q3_midhigh? Answer with only the integer."
+  },
+  {
+    "id": "ht_q038",
+    "file_name": "ht08_diabetes_target_summary.xlsx",
+    "query": "What is the mean_target for Q4_high? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q039",
+    "file_name": "ht08_diabetes_target_summary.xlsx",
+    "query": "Rank target bands by mean_feature_s5 from lowest to highest. Separate labels with comma and one space."
+  },
+  {
+    "id": "ht_q040",
+    "file_name": "ht08_diabetes_target_summary.xlsx",
+    "query": "Is mean_feature_bp for Q4_high greater than mean_feature_bp for Q1_low? Answer with only Yes or No."
+  },
+  {
+    "id": "ht_q041",
+    "file_name": "ht09_linnerud_exercise.xlsx",
+    "query": "How many participants are included in the observations sheet? Answer with only the integer."
+  },
+  {
+    "id": "ht_q042",
+    "file_name": "ht09_linnerud_exercise.xlsx",
+    "query": "Which exercise variable has the highest total across all participants: chins, situps, or jumps? Answer with only the variable name."
+  },
+  {
+    "id": "ht_q043",
+    "file_name": "ht09_linnerud_exercise.xlsx",
+    "query": "What is the average weight across participants? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q044",
+    "file_name": "ht09_linnerud_exercise.xlsx",
+    "query": "How many participants have situps of at least 200? Answer with only the integer."
+  },
+  {
+    "id": "ht_q045",
+    "file_name": "ht09_linnerud_exercise.xlsx",
+    "query": "What is the absolute difference between the maximum and minimum pulse values? Answer with only the integer."
+  },
+  {
+    "id": "ht_q046",
+    "file_name": "ht10_digits_summary.xlsx",
+    "query": "Which digit_label has the largest sample_count in the summary table? Answer with only the integer label."
+  },
+  {
+    "id": "ht_q047",
+    "file_name": "ht10_digits_summary.xlsx",
+    "query": "What is the total sample_count across all digit labels? Answer with only the integer."
+  },
+  {
+    "id": "ht_q048",
+    "file_name": "ht10_digits_summary.xlsx",
+    "query": "Which digit_label has the highest mean_nonzero_pixel_count? Answer with only the integer label."
+  },
+  {
+    "id": "ht_q049",
+    "file_name": "ht10_digits_summary.xlsx",
+    "query": "What is the mean_pixel_intensity for digit label 8? Answer with only the number rounded to two decimal places."
+  },
+  {
+    "id": "ht_q050",
+    "file_name": "ht10_digits_summary.xlsx",
+    "query": "Is the mean_nonzero_pixel_count for digit 1 lower than that for digit 8? Answer with only Yes or No."
+  }
+]

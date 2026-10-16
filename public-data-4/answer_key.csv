@@ -1,0 +1,46 @@
+﻿id,answer,skill
+hx_q001,Phone,groupby sum + argmax
+hx_q002,36,filtered sum
+hx_q003,27200,filtered sum
+hx_q004,Ha Noi,argmax
+hx_q005,2480,multi-row sum
+hx_q006,57.07,mean + rounding
+hx_q007,Mai,derived row score + argmax
+hx_q008,3,count filter
+hx_q009,86.0,median
+hx_q010,"Monitor, Router",threshold filter + sort
+hx_q011,178,sum
+hx_q012,NetPro,groupby mean + argmax
+hx_q013,Hue,argmax
+hx_q014,7.9,derived mean + rounding
+hx_q015,3,conditional count
+hx_q016,Eagles,derived metric + argmax
+hx_q017,128,sum
+hx_q018,Eagles,derived difference + argmax
+hx_q019,Engineering,groupby sum + argmax
+hx_q020,35400,filtered sum
+hx_q021,2500,cross-period difference
+hx_q022,Jun,row sum + argmax
+hx_q023,1205,column sum
+hx_q024,520,aggregate absolute difference
+hx_q025,Small Worlds,ratio + argmax
+hx_q026,19,filtered sum
+hx_q027,Technology,groupby sum + argmax
+hx_q028,VN303,argmax
+hx_q029,21.88,weighted average
+hx_q030,797,conditional sum
+hx_q031,Emergency,groupby sum + argmax
+hx_q032,35,difference
+hx_q033,2.84,mean + rounding
+hx_q034,Coffee,derived columns + argmax
+hx_q035,6960.0,row multiplication
+hx_q036,2760,conditional sum
+hx_q037,Wild Current,derived difference + argmax
+hx_q038,70.0,filtered mean
+hx_q039,7,row-wise comparison + count
+hx_q040,1155,multi-sheet join + multiplication + sum
+hx_q041,C1,groupby sum + argmax
+hx_q042,3,multi-sheet join + filter + count
+hx_q043,Delta,date subtraction + argmax
+hx_q044,2,conditional count
+hx_q045,585,sum

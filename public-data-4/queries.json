@@ -1,0 +1,227 @@
+[
+  {
+    "id": "hx_q001",
+    "file_name": "hx_t01_retail_sales.xlsx",
+    "query": "Which product has the greatest total revenue? Return only the product name."
+  },
+  {
+    "id": "hx_q002",
+    "file_name": "hx_t01_retail_sales.xlsx",
+    "query": "How many units were sold in the South region in total? Return an integer."
+  },
+  {
+    "id": "hx_q003",
+    "file_name": "hx_t01_retail_sales.xlsx",
+    "query": "What is the total revenue for Laptop sales? Return an integer without separators."
+  },
+  {
+    "id": "hx_q004",
+    "file_name": "hx_t02_population.xlsx",
+    "query": "Which province has the largest population? Return only its name."
+  },
+  {
+    "id": "hx_q005",
+    "file_name": "hx_t02_population.xlsx",
+    "query": "What is the combined population of Da Nang and Can Tho? Return an integer."
+  },
+  {
+    "id": "hx_q006",
+    "file_name": "hx_t02_population.xlsx",
+    "query": "What is the average urban population percentage across all provinces? Round to two decimals."
+  },
+  {
+    "id": "hx_q007",
+    "file_name": "hx_t03_students.xlsx",
+    "query": "Who has the highest combined Math and English score? Return only the student name."
+  },
+  {
+    "id": "hx_q008",
+    "file_name": "hx_t03_students.xlsx",
+    "query": "How many students are in Class B? Return an integer."
+  },
+  {
+    "id": "hx_q009",
+    "file_name": "hx_t03_students.xlsx",
+    "query": "What is the median Math score? Return an integer or decimal as needed."
+  },
+  {
+    "id": "hx_q010",
+    "file_name": "hx_t04_inventory_multisheet.xlsx",
+    "query": "Which items are below their reorder level? List item names alphabetically separated by comma and space."
+  },
+  {
+    "id": "hx_q011",
+    "file_name": "hx_t04_inventory_multisheet.xlsx",
+    "query": "What is the total stock across all SKUs? Return an integer."
+  },
+  {
+    "id": "hx_q012",
+    "file_name": "hx_t04_inventory_multisheet.xlsx",
+    "query": "Which supplier has the longest average lead time? Return supplier name."
+  },
+  {
+    "id": "hx_q013",
+    "file_name": "hx_t05_weather.xlsx",
+    "query": "Which city recorded the highest rainfall? Return city name."
+  },
+  {
+    "id": "hx_q014",
+    "file_name": "hx_t05_weather.xlsx",
+    "query": "What is the average daily temperature range (High minus Low) across all cities? Round to one decimal."
+  },
+  {
+    "id": "hx_q015",
+    "file_name": "hx_t05_weather.xlsx",
+    "query": "How many cities had a high temperature of at least 32 C? Return an integer."
+  },
+  {
+    "id": "hx_q016",
+    "file_name": "hx_t06_sports.xlsx",
+    "query": "Which team has the most points? Return team name."
+  },
+  {
+    "id": "hx_q017",
+    "file_name": "hx_t06_sports.xlsx",
+    "query": "What is the total number of goals scored by all teams? Return an integer."
+  },
+  {
+    "id": "hx_q018",
+    "file_name": "hx_t06_sports.xlsx",
+    "query": "Which team has the largest positive goal difference? Return team name."
+  },
+  {
+    "id": "hx_q019",
+    "file_name": "hx_t07_expenses.xlsx",
+    "query": "Which department had the highest total expense across both quarters? Return department name."
+  },
+  {
+    "id": "hx_q020",
+    "file_name": "hx_t07_expenses.xlsx",
+    "query": "What was the total expense in Q2? Return an integer."
+  },
+  {
+    "id": "hx_q021",
+    "file_name": "hx_t07_expenses.xlsx",
+    "query": "By how much did Engineering expenses increase from Q1 to Q2? Return an integer."
+  },
+  {
+    "id": "hx_q022",
+    "file_name": "hx_t08_energy.xlsx",
+    "query": "In which month was total renewable generation highest? Return month name."
+  },
+  {
+    "id": "hx_q023",
+    "file_name": "hx_t08_energy.xlsx",
+    "query": "What is the total solar generation over the six months? Return an integer."
+  },
+  {
+    "id": "hx_q024",
+    "file_name": "hx_t08_energy.xlsx",
+    "query": "What is the absolute difference between total wind and total hydro generation? Return an integer."
+  },
+  {
+    "id": "hx_q025",
+    "file_name": "hx_t09_library.xlsx",
+    "query": "Which title has the highest number of loans per copy? Return title."
+  },
+  {
+    "id": "hx_q026",
+    "file_name": "hx_t09_library.xlsx",
+    "query": "How many total copies are held for Science books? Return an integer."
+  },
+  {
+    "id": "hx_q027",
+    "file_name": "hx_t09_library.xlsx",
+    "query": "Which genre has the most total loans? Return genre name."
+  },
+  {
+    "id": "hx_q028",
+    "file_name": "hx_t10_flights.xlsx",
+    "query": "Which flight had the longest delay? Return flight code."
+  },
+  {
+    "id": "hx_q029",
+    "file_name": "hx_t10_flights.xlsx",
+    "query": "What is the passenger-weighted average delay in minutes? Round to two decimals."
+  },
+  {
+    "id": "hx_q030",
+    "file_name": "hx_t10_flights.xlsx",
+    "query": "How many passengers were on delayed flights? Return an integer."
+  },
+  {
+    "id": "hx_q031",
+    "file_name": "hx_t11_hospital.xlsx",
+    "query": "Which ward had the most admissions across both months? Return ward name."
+  },
+  {
+    "id": "hx_q032",
+    "file_name": "hx_t11_hospital.xlsx",
+    "query": "What was the absolute change in Emergency admissions from January to February? Return an integer."
+  },
+  {
+    "id": "hx_q033",
+    "file_name": "hx_t11_hospital.xlsx",
+    "query": "What is the average length of stay across all rows? Round to two decimals."
+  },
+  {
+    "id": "hx_q034",
+    "file_name": "hx_t12_agriculture.xlsx",
+    "query": "Which crop has the highest gross value? Return crop name."
+  },
+  {
+    "id": "hx_q035",
+    "file_name": "hx_t12_agriculture.xlsx",
+    "query": "What is total rice production in tonnes? Return an integer if whole, otherwise one decimal."
+  },
+  {
+    "id": "hx_q036",
+    "file_name": "hx_t12_agriculture.xlsx",
+    "query": "What is the total cultivated area for crops with yield above 5 tonnes per hectare? Return an integer."
+  },
+  {
+    "id": "hx_q037",
+    "file_name": "hx_t13_movies.xlsx",
+    "query": "Which film has the highest profit? Return title."
+  },
+  {
+    "id": "hx_q038",
+    "file_name": "hx_t13_movies.xlsx",
+    "query": "What is the average revenue for films released in 2024? Round to one decimal."
+  },
+  {
+    "id": "hx_q039",
+    "file_name": "hx_t13_movies.xlsx",
+    "query": "How many films earned at least twice their budget? Return an integer."
+  },
+  {
+    "id": "hx_q040",
+    "file_name": "hx_t14_orders_multisheet.xlsx",
+    "query": "What is the total sales value of all orders? Return an integer."
+  },
+  {
+    "id": "hx_q041",
+    "file_name": "hx_t14_orders_multisheet.xlsx",
+    "query": "Which customer placed the greatest total quantity of items? Return customer ID."
+  },
+  {
+    "id": "hx_q042",
+    "file_name": "hx_t14_orders_multisheet.xlsx",
+    "query": "How many orders were placed by customers from Hanoi? Return an integer."
+  },
+  {
+    "id": "hx_q043",
+    "file_name": "hx_t15_projects.xlsx",
+    "query": "Which project had the longest duration in days? Return project name."
+  },
+  {
+    "id": "hx_q044",
+    "file_name": "hx_t15_projects.xlsx",
+    "query": "How many projects exceeded their budget? Return an integer."
+  },
+  {
+    "id": "hx_q045",
+    "file_name": "hx_t15_projects.xlsx",
+    "query": "What is the total budget across all projects in thousands? Return an integer."
+  }
+]
