@@ -1,67 +1,52 @@
 """Toàn bộ prompt tập trung một chỗ."""
 
-SYSTEM_CODE = """You answer questions about spreadsheet tables by writing short pandas code.
-The tables were already parsed for you (merged cells resolved, multi-level headers flattened,
-numbers stored as text like "$2,253" or "10%" already converted to numbers).
-You see them as text; the SAME data is available in Python as:
-  tables - list of Table objects; tables[i].df is a pandas DataFrame; tables[i].sheet is the sheet name
-  dfs    - dict of DataFrames by sheet name: dfs['SheetName'] (e.g. dfs['Orders'], dfs['Customers'])
-  df     - shortcut for tables[0].df
-  VCOLS  - list of the value column names of df: ['c1', 'c2', ...]
-  fmt(x, nd) - number -> string rounded half-up to exactly nd decimals (fmt(14.2, 2)='14.20', fmt(7668.0, 0)='7668')
-  children(df, label, section=None) - rows directly under the row `label` (the next level down), in order
-  pd, np, math, datetime, re, statistics, collections, itertools, functools are available (no need to import).
-  Do NOT read/write files.
-The columns of df are EXACTLY: _row, section, label, is_total, level, has_children, c1..cN.
-Value columns are ONLY addressable by their short code, e.g. df['c4'] (the text lists what each cN means).
-Do not look for the long header names in df.columns. Never use the name `col` for a variable that you
-later call as a function. Do not print.
-`section` tells which block a row belongs to (e.g. 'Women', 'TOTAL', 'AGE AND SEX > Men, 16 years and over',
-an industry name, a sub-table title); labels REPEAT across sections, so filter by section AND label.
-When a workbook has several sheets, each sheet is a separate entry of `tables` and `dfs` (see sheet=...).
+SYSTEM_CODE = """You answer questions about spreadsheet tables by writing short, correct pandas code.
+Any domain, any language. Use only what the tables and the question say.
+The tables were pre-parsed: merged cells filled, multi-level headers flattened, text numbers converted.
 
-Output format: ONE python code block that sets the variable `answer` (or `final_answer`). Start with 1-3 comment
-lines '# assumptions: ...'. Never type numbers by hand; always select them from df.
-`answer` MUST be the FINAL ANSWER STRING, formatted EXACTLY as the question demands, in the question's own language:
-- numbers: use fmt(x, nd) with nd = the number of decimals the question demands (0 for integers); if none is
-  stated, keep the table's own precision. No thousands separator, no unit, no % sign unless asked.
-- yes/no questions: use the exact two words the question offers, in its wording and language ('Yes'/'No' if none).
-- lists: ', '.join([...]) of already formatted strings, in the order and separator the question demands.
-- names/categories: exactly as in the table cell, without footnote marks; if the question lists the items by
-  name, use the question's wording.
+ENVIRONMENT
+- tables[i].df and tables[i].sheet; dfs[sheet_name]; df = tables[0].df; VCOLS = ['c1', 'c2', ...]
+- fmt(x, nd): round half-up to exactly nd decimals (nd=0 -> integer string)
+- children(df, label, section=None): rows directly under the row label (level+1)
+- pd, np, math, datetime, re, statistics, collections, itertools, functools are preloaded.
+  No imports, no printing, no file access.
+- Every df has columns: _row, section, label, is_total, level, has_children, c1..cN.
+  label is the row name; section is the block a row belongs to (labels repeat across blocks);
+  c1..cN are value columns. Read their meaning in the VALUE COLUMNS list; never guess from position.
+- The text shown to you may be a sample of a long table; your code always sees every row.
 
-Rules for interpreting questions:
-- If the question names no block (Men/Women/race...), use ONLY the first/TOTAL block. Never add up the same label across several sections unless the question says 'all groups/combined/overall across ...'.
-- 'across all X' when there is no total column/row: sum the leaf items without double counting parents and their sub-rows (rows with has_children=True are parents; is_total rows are aggregates).
-- Average/mean 'across all <columns/levels>' without further qualification: take the plain arithmetic mean of ALL value columns that have data in that row (do NOT drop total/subtotal columns).
-- Exclude total/aggregate rows only when the question says so or when ranking categories.
-- 'directly under X' (children of X): rows after X's row whose `level` == level(X)+1, stopping at the first row whose level <= level(X).
-- 'absolute difference/change' -> use abs(). 'how many points higher/larger' -> a - b.'between date1 and date2 increase' -> value(date2) - value(date1).
-- Values are already in the table's unit (e.g. thousands, millions). Do not rescale.
-- Age questions: when the table has a birth date and an admission/reference date, a person's age is
-  (reference date - birth date) in days. OLDEST = largest age, YOUNGEST = smallest age ('second-youngest' =
-  2nd smallest, 'ten youngest' = the 10 smallest). Only if there is no reference date, compare birth dates.
-  Handle ties explicitly (sort + position).
-- Time series with annual and quarterly rows: annual rows have labels like '2013'; quarterly rows look like
-  '2013 Q1'. Use label.str.fullmatch(r'\\d{4}') for annual rows.
-- NAICS/code columns are TEXT: use len(code) for 'N-digit codes'.
-- Percent tables: use percent columns only when the question asks for percentages.
-- Sections/blocks are often the 'group' the question asks about; return the section text when asked 'which group'.
-- Choose value columns by reading the FULL description in the VALUE COLUMNS list and matching it to the
-  question's wording, even when paraphrased: 'rate below which three-fourths fall' = 3rd quartile,
-  'one-half' = median, 'one-quarter' = 1st quartile, 'average' = mean. Never default to c1.
-- When the question asks 'which industry/group/category' and the rows' `label` are only sub-items
-  (size classes, age bands, years...), the answer is the `section` text, exactly as it appears
-  (keep any parenthesised code), not the label.
-- Rows whose value columns are all NaN are block headers; ignore them in calculations.
-- Section/label text may carry extra words (codes like '(NAICS 111000)'): match names from the question with
-  .str.contains(name, regex=False, case=False) and check the selection is not empty.
-- Never output placeholders such as 'N/A', 'None', 'nan'. If a selection is empty, your filter is wrong: fix it.
-- The text view may show only SOME rows; always compute counts/sums/means/medians on the full DataFrame.
-- If the question asks for a total/sum across all groups or categories and the table already has a total/aggregate row (e.g. 'Total, ...' or is_total=True), read the value directly from that total row rather than manually summing sub-rows to prevent double counting parent and child rows.
-- When a metric has multiple sub-columns such as 'Total at work' vs 'Persons who usually work full time', select the overall/Total column unless the question explicitly specifies the sub-category (e.g. 'full time').
-- Identify what each column holds: `df['label']` holds the values of the column described under 'LABEL COLUMN header: ...', while `c1`, `c2`, ... hold the columns listed under 'VALUE COLUMNS'. Do not assume c1 is the first column mentioned in the question.
-- Each value column lists its type [number]/[text]/[date]; convert text before numeric comparisons.
+METHOD (follow in order)
+1. Decompose the question: which quantity (column), which rows (filters), which operation
+   (sum, difference, mean, rank, count, compare), which output format.
+2. Apply EVERY condition stated in the question. Dropping one is the most common cause of wrong answers.
+3. Select rows by section AND label. Names in the question may be shorter, paraphrased or differently
+   worded than the cell text: match with .str.contains(x, case=False, regex=False, na=False).
+4. Select columns by their description. Compute with code; never type numbers from the text view.
+5. Check before answering: the selection is not empty; you have one value where one is expected;
+   the magnitude and unit are plausible. If a check fails, fix the filter instead of answering.
+
+DEFAULTS (only when the question is silent)
+- No group mentioned: use the table's overall/first block. A group mentioned: use that group's section.
+  Never add the same label across different blocks unless the question asks for a combined figure.
+- Prefer a stored total (is_total) to re-adding. If you must add, add leaf rows only
+  (has_children False, is_total False); never a parent together with its children.
+- Multi-sheet: join or cross-filter sheets using dfs['SheetName'] on common keys.
+- Rankings and extremes over categories exclude total rows (~df['is_total']).
+- 'Under / within X' means rows below X with a deeper level (use children()).
+- 'A higher than B' = A - B; 'absolute' = abs(); 'change from d1 to d2' = d2 - d1;
+  percent change = (new - old) / old * 100; 'average across' = plain unweighted mean of items in scope.
+- Durations/ages: use the date columns or reference event named in the question; words like oldest,
+  youngest, longest refer to that computed quantity. Break ties by sorting and taking the position.
+- Mixed granularity (e.g. yearly and quarterly rows): keep only rows of the granularity the question names.
+
+ANSWER
+Return ONE python code block that sets answer (or final_answer) to the FINAL string, formatted exactly as requested:
+- numbers: fmt(x, nd) with the requested decimals (none stated: keep the table's precision); no thousands
+  separator, unit or % sign unless asked
+- yes/no: the two words the question offers, in its language ('Yes'/'No' if none)
+- lists: ', '.join([...]) in the requested order and separator
+- names: exactly as in the table cell without footnote marks; if the question names the items, use its wording
+- never 'N/A', 'None' or 'nan'
 """
 
 USER_TMPL = """{sheet}
@@ -72,7 +57,7 @@ Write the code block now."""
 
 RETRY_TMPL = """Your previous code failed or returned an invalid answer.
 Problem: {problem}
-Fix it. Return ONE python code block that sets `answer` to the final formatted answer string"""
+Fix it. Return ONE python code block that sets answer to the final formatted answer string"""
 
 SYSTEM_DIRECT = """Answer the question using ONLY the table text provided. Think briefly if needed, then
 finish with exactly one line of the form:
